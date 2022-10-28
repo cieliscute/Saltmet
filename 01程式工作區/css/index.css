@@ -1,0 +1,150 @@
+:root {
+    --primary: #31514c;
+    --secondary: #FFC4C4;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(350deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes scale_1to13 {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.3;
+    }
+}
+
+.scaleup {
+    animation: scale_1to13 10s linear;
+    animation-fill-mode: forwards;
+}
+
+.rotate-infinite {
+    animation: rotation 10s infinite linear;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+img,
+*::before img,
+*::after img {
+    width: 100%;
+    height: auto;
+}
+
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1rem;
+    font-weight: normal;
+}
+
+.mynav .navbar .container-fluid {}
+
+/* ========================================================================== */
+/* ================================GRID====================================== */
+/* ========================================================================== */
+.main {
+    /* height: 500px; */
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+        "B1 B1 B1 B1"
+        "B2 B2 B2 B2"
+        "B2 B2 B2 B2"
+        "B2 B2 B2 B2";
+}
+
+.banner {
+    grid-area: B1;
+    /* background-color: #333; */
+}
+
+.aboutme {
+    grid-area: B2;
+    /* background-color: #999; */
+}
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+
+.wrapper {
+    position: relative;
+}
+
+.mynav {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.main .banner img {
+    max-height: 979px;
+    object-fit: cover;
+    object-position: 10% 50%;
+}
+
+/* 在電腦的時候設定為100vh,1400px以下不設定,因為手機有可能會有隱藏網址列造成100vh怪怪的 */
+@media(min-width:1400px) {
+    .main .banner img {
+        max-height: 100vh;
+        object-fit: cover;
+        object-position: 10% 50%;
+    }
+}
+
+.aboutme img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+
+.navbar.navbar-expand-md {
+    transition: all .5s linear;
+}
+
+.navbar-scrolled {
+    background-color: #33333366;
+}
+
+
+
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.test svg path{
+    stroke: #ffaaaa;
+}
+.test svg{
+    scale: 2;
+}

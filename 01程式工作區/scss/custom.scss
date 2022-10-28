@@ -1,0 +1,73 @@
+// // Custom.scss
+// // Option B: Include parts of Bootstrap
+
+// // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// @import "../Bootstrap/scss/functions";
+// // 2. Include any default variable overrides here
+
+// // 3. Include remainder of required Bootstrap stylesheets
+// @import "../Bootstrap/scss/variables";
+// @import "../Bootstrap/scss/mixins";
+
+// // 4. Include any optional Bootstrap components as you like
+// @import "../Bootstrap/scss/root";
+// @import "../Bootstrap/scss/reboot";
+// @import "../Bootstrap/scss/type";
+// @import "../Bootstrap/scss/images";
+// @import "../Bootstrap/scss/containers";
+// @import "../Bootstrap/scss/grid";
+
+// // 5. Add additional custom code here
+
+
+@import "../Bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+
+// scss-docs-start import-stack
+// Configuration
+@import "../Bootstrap/scss/functions";
+@import "../Bootstrap/scss/variables";
+@import "../Bootstrap/scss/maps";
+@import "../Bootstrap/scss/mixins";
+@import "../Bootstrap/scss/utilities";
+
+// Layout & components
+@import "../Bootstrap/scss/root";
+@import "../Bootstrap/scss/reboot";
+@import "../Bootstrap/scss/type";
+@import "../Bootstrap/scss/images";
+@import "../Bootstrap/scss/containers";
+@import "../Bootstrap/scss/grid";
+@import "../Bootstrap/scss/tables";
+@import "../Bootstrap/scss/forms";
+@import "../Bootstrap/scss/buttons";
+@import "../Bootstrap/scss/transitions";
+@import "../Bootstrap/scss/dropdown";
+@import "../Bootstrap/scss/button-group";
+@import "../Bootstrap/scss/nav";
+@import "../Bootstrap/scss/navbar";
+@import "../Bootstrap/scss/card";
+@import "../Bootstrap/scss/accordion";
+@import "../Bootstrap/scss/breadcrumb";
+@import "../Bootstrap/scss/pagination";
+@import "../Bootstrap/scss/badge";
+@import "../Bootstrap/scss/alert";
+@import "../Bootstrap/scss/progress";
+@import "../Bootstrap/scss/list-group";
+@import "../Bootstrap/scss/close";
+@import "../Bootstrap/scss/toasts";
+@import "../Bootstrap/scss/modal";
+@import "../Bootstrap/scss/tooltip";
+@import "../Bootstrap/scss/popover";
+@import "../Bootstrap/scss/carousel";
+@import "../Bootstrap/scss/spinners";
+@import "../Bootstrap/scss/offcanvas";
+@import "../Bootstrap/scss/placeholders";
+
+// Helpers
+@import "../Bootstrap/scss/helpers";
+
+// Utilities
+@import "../Bootstrap/scss/utilities/api";
+// scss-docs-end import-stack

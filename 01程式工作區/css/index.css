@@ -1,3 +1,6 @@
+/* 引入bootstrap.css */
+@import url(./custom.css);
+
 :root {
     --primary: #31514c;
     --secondary: #FFC4C4;
@@ -60,11 +63,10 @@ img,
 }
 
 
-
-.collapse.navbar-collapse{
+/* .collapse.navbar-collapse{
     background-color: #faa;
     overflow:scroll !important;
-}
+} */
 
 /* ========================================================================== */
 /* ================================GRID====================================== */
@@ -138,7 +140,6 @@ img,
 }
 
 
-
 /* swiper */
 .swiper {
     width: 100%;
@@ -154,12 +155,52 @@ img,
     display: block;
     width: 100%;
 }
+/* no use ^^^^^^^^^ */
 
-.test svg path {
-    stroke: #ffaaaa;
+
+
+.navbar_offcanvas_btn{
+    width: 3rem;
+    height:3rem;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    border: unset;
+    position: relative;
+    padding: 0px;
 }
 
-.test svg {
-    scale: 2;
+.offcanvas_btn_icon{
+    width: 100%;
+    height: 2px;
+    background-color:var(--bs-warning);
+    transition: all .2s linear;
+}
+.offcanvas_btn_icon::before,.offcanvas_btn_icon::after{
+    content:"";
+    width: 80%;
+    height: 2px;
+    position: absolute;
+}
+.offcanvas_btn_icon::after{
+    content:"";
+    background-color: #fff;
+    top:10px;
+    right: 0px;
+    /* right: 0px; */
+} 
+.offcanvas_btn_icon::before{
+    content:"";
+    background-color: #fff;
+    bottom:10px;
+    right: 0px;
+} 
+.navbar_offcanvas_btn:hover span{
+    width: 80%;
 }
 
+.offcanvas_icon_hover{
+    top:50%;
+    transform:rotate(45deg);
+}

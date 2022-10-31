@@ -3,6 +3,14 @@
     --secondary: #FFC4C4;
 }
 
+/* 引入 justfont粉圓字體 */
+@font-face {
+    font-family: Saltmet;
+
+    src: local(jf-openhuninn),
+        url(./jf-openhuninn-1.1/jf-openhuninn-1.1.ttf);
+}
+
 @keyframes rotation {
     from {
         transform: rotate(350deg);
@@ -46,12 +54,17 @@ img,
 }
 
 * {
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Saltmet','Noto Sans TC', sans-serif;
     line-height: 1rem;
     font-weight: normal;
 }
 
-.mynav .navbar .container-fluid {}
+
+
+.collapse.navbar-collapse{
+    background-color: #faa;
+    overflow:scroll !important;
+}
 
 /* ========================================================================== */
 /* ================================GRID====================================== */
@@ -142,9 +155,11 @@ img,
     width: 100%;
 }
 
-.test svg path{
+.test svg path {
     stroke: #ffaaaa;
 }
-.test svg{
+
+.test svg {
     scale: 2;
 }
+

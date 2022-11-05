@@ -1,0 +1,11 @@
+:root{
+    
+}
+.wrapper{
+    /* margin: 0px; */
+    background-color: #333;
+    width: 100%;
+}
+.bg-primary{
+    background-color: #faa !important;
+}

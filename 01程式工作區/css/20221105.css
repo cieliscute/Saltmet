@@ -8,7 +8,7 @@
 
 .wrapper{
     /* margin: 0px; */
-    background-color: #333;
+    background-color: #fa0;
     width: 100%;
 }
 .bg-primary{
@@ -29,7 +29,25 @@
     animation: scale_1to13 10s linear;
     animation-fill-mode: forwards;
 }
+/* ============================================================================= */
+/* navbar按鈕 */
+nav.navbar a.btn{
+    background-color: #fff;
+}
+/* navbar按鈕active */
+.mynav-active{
+    background-color: #000;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0;
+    z-index: 1;
+}
 
+
+
+/* 設定banner 在各個裝置上的圖片高度*/
 main .carousel .carousel-item{
     height: 100vh;
 }
@@ -38,3 +56,4 @@ main .carousel .carousel-item{
         height: 100%;
     }
 }
+

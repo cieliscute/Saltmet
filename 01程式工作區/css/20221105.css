@@ -1,6 +1,9 @@
 /*      lg:992~              */
 /*      sm:576~991           */
 /*      below-sm:~575        */
+html{
+    scroll-behavior: smooth
+}
 :root{
     --mynav-active-padding-top-lg:150px;
     /* --mynav-active-padding-top-sm:; */
@@ -31,7 +34,6 @@ img{
     width: 100%;
     height: auto;
 }
-
 .wrapper{
     background-color: #fa0;
     width: 100%;
@@ -130,7 +132,62 @@ nav.navbar .navbar-brand img{
     }
 }
 
-
+#navbar-btn{
+    width: 70px;
+    height: 50px;
+    /* background-color: #31514c; */
+    position: relative;
+}   
+#navbar-btn i{
+    width: 150%;
+    height: 3px;
+    background-color: #fff;
+    transition:all .4s ease-out;
+}
+#navbar-btn i::before{
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top:20%;
+    right: 0px;
+    transition: all .4s ease-out;
+}
+#navbar-btn i::after{
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom:20%;
+    right: 0px;
+    transition: all .4s ease-out;
+}
+#navbar-btn:hover i,#navbar-btn:hover i::before,#navbar-btn:hover i::after{
+    background-color: #fa0;
+}
+#navbar-btn:hover i{
+    width: 60%;
+}
+#navbar-btn.active i::before{
+    top:50%;
+    transform: translate(0,-50%) rotate(45deg);
+    background-color: #fa0;
+    width: 40%;
+}
+#navbar-btn.active i::after{
+    bottom:50%;
+    transform: translate(0,50%) rotate(-45deg);
+    background-color: #fa0;
+    width: 40%;
+}
+#navbar-btn.active i{
+    background-color: transparent;
+    width: 0px;
+}
 /* 設定banner 在各個裝置上的圖片高度*/
 
 .banner .carousel-item img{
@@ -140,10 +197,23 @@ nav.navbar .navbar-brand img{
 @media(max-width:991px){
     .banner .carousel-item img{
         height: 100%;
+        min-height: 600px;
     }
 }
 @media(max-width:575px){
     .banner .carousel-item img{
         height: 100%;
     }
+}
+
+.parallax{
+height: 400px;
+background-image: url("https://picsum.photos/id/251/800/800");
+background-size: cover;
+background-attachment: fixed;
+background-position: 0% 40%;
+}
+
+.menu{
+    height: 1000px;
 }
